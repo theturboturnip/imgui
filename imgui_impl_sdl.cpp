@@ -220,7 +220,7 @@ static void ImGui_ImplSDL2_UpdateMousePosAndButtons()
     io.MouseDown[2] = g_MousePressed[2] || (mouse_buttons & SDL_BUTTON(SDL_BUTTON_MIDDLE)) != 0;
     g_MousePressed[0] = g_MousePressed[1] = g_MousePressed[2] = false;
 
-#if SDL_HAS_CAPTURE_MOUSE
+#if SDL_HAS_CAPTURE_MOUSE && 0 // This way of detecting pos doesn't take the title bar of the window into account.
     SDL_Window* focused_window = SDL_GetKeyboardFocus();
     if (g_Window == focused_window)
     {
