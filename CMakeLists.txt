@@ -10,6 +10,3 @@ add_library(imgui STATIC
   )
 target_include_directories(imgui PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/imgui/ ${SDL2_INCLUDE_DIRS}) # ImGui expects the includes to be includable with #include "imgui.h"
 target_compile_options(imgui PRIVATE "-std=c++1z" "-Wno-everything")
-
-
-  
